@@ -79,9 +79,9 @@ leaderboards:
           - "Type: Proprietary"
 
 
-  - display_name: SWE-bench Pro
+  - display_name: SWE-Bench Pro
     info_sections:
-      - title: '<a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer">SWE-bench Pro</a>'
+      - title: '<a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer">SWE-Bench Pro</a>'
         content: SWE-Bench Pro contains 731 publicly-available problems, aimed to capture realistic, complex, enterprise-level problems. Compared with SWE-bench Verified, SWE-Bench Pro contains more difficult problems across multiple repositories and programming languages.
     results:
      # Proprietary Models
