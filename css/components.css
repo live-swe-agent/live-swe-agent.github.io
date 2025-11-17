@@ -227,6 +227,11 @@
     transition: width var(--transition-normal);
 }
 
+/* Dark mode: purple gradient for progress bar */
+[data-theme="dark"] .resolved-bar {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
 .resolved-text {
     position: absolute;
     left: 0;
@@ -239,6 +244,12 @@
     color: var(--color-text);
     z-index: 1;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+/* Dark mode: clear white text without glow effect */
+[data-theme="dark"] .resolved-text {
+    color: #ffffff;
+    text-shadow: none;
 }
 
 /* Responsive Table */
