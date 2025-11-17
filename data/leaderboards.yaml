@@ -1,0 +1,114 @@
+# Website Title (displayed in purple header at the top)
+website_title: Live-SWE-agent
+
+# Website Subtitle (optional, displayed below the title with smaller, lighter text)
+website_subtitle: Can Software Engineering Agents to Self-Evolve on the Fly?
+
+# Section Title (the word shown above the tabs, default is "Leaderboard")
+section_title: Leaderboard
+
+# Section Description (displayed below the section title, supports HTML)
+section_description: 'All results are evaluated using our <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Live-SWE-agent</a> scaffold. <br> The <span class="badge badge-verified" style="padding: 0.0625rem 0.25rem; font-size: 0.7rem;">✓</span> badge indicates that results have been verified.' 
+
+# Footer Links Configuration
+footer_links:
+  - name: GitHub
+    url: https://github.com/OpenAutoCoder/live-swe-agent
+  - name: HuggingFace
+    url: https://huggingface.co/ise-uiuc
+  - name: Paper
+    url: https://www.google.com
+
+# ==============================================================================
+# Leaderboards Configuration
+# ==============================================================================
+# Each leaderboard represents a separate benchmark/dataset
+# You can add as many leaderboards as you want, and they will appear as tabs
+#
+# Fields:
+#   display_name: The text shown in the tab (required, can be anything)
+#   info_sections: List of information blocks shown at bottom (optional)
+#     - title: Section title
+#       content: Section content
+#   results: List of model results
+#
+# Note: 'name' is auto-generated from display_name (lowercase + underscores)
+# ==============================================================================
+
+leaderboards:
+  - display_name: SWE-bench Verified
+    info_sections:
+      - title: Live-SWE-agent
+        content: Live-SWE-agent is the first live software agent that can autonomously and continuously evolve itself on-the-fly during runtime when solving real-world soft-ware problems. 
+      - title: '<a href="https://openai.com/index/introducing-swe-bench-verified/" target="_blank" rel="noopener noreferrer">SWE-bench Verified</a>'
+        content: SWE-bench Verified benchmark contains 500 software development problems where the goal is to successfully modify the repository given a problem description. SWE-bench Verified is validated by human developers to ensure each problem description has sufficient amount of information to solve the issue.
+
+    results:
+      # Proprietary Models
+      - model: Claude 4.5 Sonnet (20250929)
+        org: Anthropic
+        resolved: 75.4
+        avg_cost: 0.68
+        date: "2025-11-15"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: Anthropic"
+          - "Type: Proprietary"
+
+      - model: GPT-5 (2025-08-07)
+        org: OpenAI
+        resolved: 68.4
+        avg_cost: 0.27
+        date: "2025-11-15"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: OpenAI"
+          - "Type: Proprietary"
+
+      - model: GPT-5-mini (2025-08-07)
+        org: OpenAI
+        resolved: 63.0
+        avg_cost: 0.05
+        date: "2025-11-15"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: OpenAI"
+          - "Type: Proprietary"
+
+
+  - display_name: SWE-bench Pro
+    info_sections:
+      - title: '<a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer">SWE-bench Pro</a>'
+        content: SWE-Bench Pro contains 731 publicly-available problems, aimed to capture realistic, complex, enterprise-level problems. Compared with SWE-bench Verified, SWE-Bench Pro contains more difficult problems across multiple repositories and programming languages.
+    results:
+     # Proprietary Models
+      - model: Claude 4.5 Sonnet (20250929)
+        org: Anthropic
+        resolved: 45.8
+        avg_cost: 0.73
+        date: "2025-11-15"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: Anthropic"
+          - "Type: Proprietary"
+
+  - display_name: SWE-bench Multilingual
+    info_sections:
+      - title: '<a href="https://www.swebench.com/multilingual.html" target="_blank" rel="noopener noreferrer">SWE-bench Multilingual</a>'
+        content: SWE-bench Multilingual is a benchmark of software engineering tasks across 9 programming languages (JavaScript, TypeScript, Rust, Ruby, Go, C/C++, PHP, and Java). Curretly we only run evaluation on a subset of 50 problems in this benchmark.
+    results:
+      # Proprietary Models
+      - model: Claude 4.5 Sonnet (20250929)
+        org: Anthropic
+        resolved: 46.0
+        avg_cost: 0.66
+        date: "2025-11-15"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: Anthropic"
+          - "Type: Proprietary"

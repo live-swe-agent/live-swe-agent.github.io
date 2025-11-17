@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Live-SWE-agent Leaderboard{% endblock %}</title>
+    <meta name="description" content="Leaderboard for Live-SWE-agent scaffold evaluated on SWE-bench Verified and SWE-bench Pro">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/livesweagent.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/core.css?v=15">
+    <link rel="stylesheet" href="css/layout.css?v=15">
+    <link rel="stylesheet" href="css/components.css?v=15">
+    <link rel="stylesheet" href="css/filters.css?v=15">
+    <link rel="stylesheet" href="css/sidebar.css?v=15">
+
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <!-- Main Layout with Sidebar -->
+    <div class="main-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/livesweagent.png" alt="Live-SWE-agent Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">Live-SWE-agent</h2>
+            </div>
+            <hr class="sidebar-divider">
+            <nav class="sidebar-nav">
+                <a href="#leaderboard" class="sidebar-link active" data-section="leaderboard">
+                    <span>Leaderboard</span>
+                </a>
+                <div class="sidebar-group">
+                    <div class="sidebar-category" id="about-category">
+                        <span>About</span>
+                        <svg class="collapse-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="sidebar-submenu" id="about-submenu">
+                        <a href="{{ content.paper_url }}" class="sidebar-sublink sidebar-external-link" target="_blank" rel="noopener noreferrer">
+                            <span>Paper</span>
+                            <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="#about-code" class="sidebar-sublink" data-section="about" data-subsection="code">Code</a>
+                        <a href="#about-citation" class="sidebar-sublink" data-section="about" data-subsection="citation">Citation</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dark Mode Toggle -->
+            <div class="dark-mode-toggle" id="dark-mode-toggle">
+                <svg id="sun-icon" class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <div class="toggle-switch">
+                    <div class="toggle-slider"></div>
+                </div>
+                <svg id="moon-icon" class="toggle-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Live-SWE-agent</p>
+            <div class="footer-links">
+                {% for link in footer_links %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/dark-mode.js?v=17"></script>
+    <script src="js/multiselect-dropdown.js?v=16"></script>
+    <script src="js/leaderboard.js?v=16"></script>
+    <script src="js/filters.js?v=16"></script>
+    <script src="js/sidebar.js?v=16"></script>
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>
