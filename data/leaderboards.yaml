@@ -14,10 +14,10 @@ section_description: 'All results are evaluated using our <a href="https://www.g
 footer_links:
   - name: GitHub
     url: https://github.com/OpenAutoCoder/live-swe-agent
-  - name: HuggingFace
-    url: https://huggingface.co/ise-uiuc
+  # - name: HuggingFace
+  #   url: https://huggingface.co/ise-uiuc
   - name: Paper
-    url: https://www.google.com
+    url: https://arxiv.org/abs/2511.13646
 
 # ==============================================================================
 # Leaderboards Configuration
@@ -38,8 +38,21 @@ footer_links:
 leaderboards:
   - display_name: SWE-bench Verified
     info_sections:
-      - title: Live-SWE-agent
-        content: Live-SWE-agent is the first live software agent that can autonomously and continuously evolve itself on-the-fly during runtime when solving real-world soft-ware problems. 
+      - title: '<a href="https://arxiv.org/abs/2511.13646" target="_blank" rel="noopener noreferrer">Live-SWE-agent</a>'
+        content: |
+          Live-SWE-agent is the first live software agent that can autonomously and continuously evolve itself on-the-fly during runtime when solving real-world software problems.
+          <br>
+          Figure below presents an overview of Live-SWE-agent.
+          <br>
+          <img src="img/overview.pdf" alt="Live-SWE-agent Overview" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+          <br>
+          First, <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">1</span> the agent take in both the project codebase and the description of the issue to be solved with only a limited set of tools (e.g., bash commands), aiming to generate and use its own tools on the fly while solving the issue.
+          <br>
+          During execution, at each step, it can choose to either <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">2</span> output a command (e.g., to use a tool) or <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">3</span> create a custom tool that can help it solve the issue. In Live-SWE-Agent, we define a custom tool as a script that can be executed in the environment.
+          <br>
+          Next, based on the <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">4</span> environmental feedback message, <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">5</span> we specifically ask the agent to reflect upon the past steps and decide whether a tool should be created.
+          <br>
+          This loop is repeated until the agent has submitted a solution <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">6</span> to the initial problem.
       - title: '<a href="https://openai.com/index/introducing-swe-bench-verified/" target="_blank" rel="noopener noreferrer">SWE-bench Verified</a>'
         content: SWE-bench Verified benchmark contains 500 software development problems where the goal is to successfully modify the repository given a problem description. SWE-bench Verified is validated by human developers to ensure each problem description has sufficient amount of information to solve the issue.
 

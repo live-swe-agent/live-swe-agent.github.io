@@ -1,11 +1,10 @@
 # About
 
-<!-- Paper URL: https://www.google.com -->
+<!-- Paper URL: https://arxiv.org/abs/2511.13646 -->
 
 ## Code
 
-**GitHub:** [To be added]
-**Huggingface:** [To be added]
+**GitHub:** [https://github.com/OpenAutoCoder/live-swe-agent](https://github.com/OpenAutoCoder/live-swe-agent)
 
 ---
 
@@ -33,11 +32,14 @@ The layout and design of this website are inspired by the [SWE-bench](https://sw
 
 If you use Live-SWE-agent in your research, please cite our paper:
 ```bibtex
-@article{live-swe-agent2025,
-  title={[To be filled]},
-  author={[To be filled]},
-  journal={[To be filled]},
-  year={2025}
+@misc{xia2025livesweagentsoftwareengineeringagents,
+      title={Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?}, 
+      author={Chunqiu Steven Xia and Zhe Wang and Yan Yang and Yuxiang Wei and Lingming Zhang},
+      year={2025},
+      eprint={2511.13646},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2511.13646}, 
 }
 ```
 
