@@ -66,6 +66,7 @@ leaderboards:
         date: "2025-11-20"
         open_source: false
         verified: true
+        newest: true
         tags:
           - "Org: Google"
           - "Type: Proprietary"

@@ -208,6 +208,11 @@
     color: white;
 }
 
+.badge-newest {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
 /* Resolved Bar */
 .resolved-bar-container {
     position: relative;
@@ -304,4 +309,5 @@
     color: var(--color-primary);
     vertical-align: super;
     line-height: 0;
+    margin-left: -0.3em;
 }

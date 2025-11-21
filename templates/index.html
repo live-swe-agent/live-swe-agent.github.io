@@ -88,6 +88,9 @@
                                     {% if result.verified %}
                                     <span class="badge badge-verified" title="Verified">✓</span>
                                     {% endif %}
+                                    {% if result.newest %}
+                                    <span class="badge badge-newest" title="Newest">NEW</span>
+                                    {% endif %}
                                 </div>
                             </td>
                             <td class="resolved-col">
