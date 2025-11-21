@@ -156,6 +156,11 @@ function applyFilters(leaderboard) {
     if (window.leaderboard) {
         window.leaderboard.updateRankings(leaderboard);
     }
+
+    // Update footnotes after filtering
+    if (window.footnotes) {
+        window.footnotes.updateFootnotes(leaderboard);
+    }
 }
 
 /**

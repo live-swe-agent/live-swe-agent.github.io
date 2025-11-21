@@ -298,3 +298,10 @@
     margin: 0.25rem 0;
     line-height: 1.4;
 }
+
+.footnote-ref {
+    font-size: 0.85em;
+    color: var(--color-primary);
+    vertical-align: super;
+    line-height: 0;
+}

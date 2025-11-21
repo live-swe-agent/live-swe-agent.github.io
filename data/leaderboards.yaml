@@ -56,13 +56,11 @@ leaderboards:
       - title: '<a href="https://openai.com/index/introducing-swe-bench-verified/" target="_blank" rel="noopener noreferrer">SWE-bench Verified</a>'
         content: SWE-bench Verified benchmark contains 500 software development problems where the goal is to successfully modify the repository given a problem description. SWE-bench Verified is validated by human developers to ensure each problem description has sufficient amount of information to solve the issue.
 
-    footnotes:
-      - "¹ We use temperature=1.0 for Gemini 3 Pro Preview."
-
     results:
       # Proprietary Models
-      - model: Gemini 3 Pro Preview (20251118)¹
+      - model: Gemini 3 Pro Preview (20251118)
         org: Google
+        footnote: "We use temperature=1.0 for this model."
         resolved: 77.4
         avg_cost: 0.482
         date: "2025-11-20"

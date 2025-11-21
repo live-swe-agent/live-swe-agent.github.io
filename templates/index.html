@@ -76,11 +76,12 @@
                             data-resolved="{{ result.resolved }}"
                             data-cost="{{ result.avg_cost }}"
                             data-org="{{ result.org }}"
-                            data-date="{{ result.date }}">
+                            data-date="{{ result.date }}"
+                            {% if result.footnote %}data-footnote="{{ result.footnote }}"{% endif %}>
                             <td class="rank-col"></td>
                             <td class="model-col">
                                 <div class="model-name">
-                                    {{ result.model }}
+                                    <span class="model-name-text">{{ result.model }}</span><span class="footnote-ref" style="display:none;"></span>
                                     {% if result.open_source %}
                                     <span class="badge badge-oss" title="Open Source">OSS</span>
                                     {% endif %}
@@ -108,14 +109,8 @@
                 <p>No models match the selected filters.</p>
             </div>
 
-            <!-- Footnotes -->
-            {% if leaderboard.footnotes %}
-            <div class="leaderboard-footnotes">
-                {% for footnote in leaderboard.footnotes %}
-                <p class="footnote-text">{{ footnote }}</p>
-                {% endfor %}
-            </div>
-            {% endif %}
+            <!-- Footnotes (dynamically populated) -->
+            <div class="leaderboard-footnotes" id="{{ leaderboard.name }}-footnotes"></div>
 
             <!-- Benchmark Info Sections -->
             {% if leaderboard.info_sections %}
