@@ -50,6 +50,13 @@ def load_markdown_content(content_dir: Path) -> dict:
         else:
             content['paper_url'] = 'https://www.swebench.com'  # Default
 
+        # Extract Code URL from HTML comment
+        code_url_match = re.search(r'<!-- Code URL: (.+?) -->', md_text)
+        if code_url_match:
+            content['code_url'] = code_url_match.group(1).strip()
+        else:
+            content['code_url'] = 'https://github.com/OpenAutoCoder/live-swe-agent'  # Default
+
         # Split by H2 headers (## Title)
         # Pattern: ## Section Title
         sections = re.split(r'\n## ', md_text)
@@ -81,6 +88,7 @@ def load_markdown_content(content_dir: Path) -> dict:
         content['code'] = ''
         content['citation'] = ''
         content['paper_url'] = 'https://www.swebench.com'
+        content['code_url'] = 'https://github.com/OpenAutoCoder/live-swe-agent'
 
     return content
 

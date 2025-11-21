@@ -8,7 +8,7 @@ website_subtitle: Can Software Engineering Agents to Self-Evolve on the Fly?
 section_title: Leaderboard
 
 # Section Description (displayed below the section title, supports HTML)
-section_description: 'All results are evaluated using our <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Live-SWE-agent</a> scaffold. <br> The <span class="badge badge-verified" style="padding: 0.0625rem 0.25rem; font-size: 0.7rem;">✓</span> badge indicates that results have been verified.' 
+section_description: 'All results are evaluated using our <a href="https://github.com/OpenAutoCoder/live-swe-agent" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Live-SWE-agent</a> scaffold. <br> The <span class="badge badge-verified" style="padding: 0.0625rem 0.25rem; font-size: 0.7rem;">✓</span> badge indicates that results have been verified.' 
 
 # Footer Links Configuration
 footer_links:
@@ -58,6 +58,7 @@ leaderboards:
 
     results:
       # Proprietary Models
+
       - model: Claude 4.5 Sonnet (20250929)
         org: Anthropic
         resolved: 75.4
@@ -69,7 +70,7 @@ leaderboards:
           - "Org: Anthropic"
           - "Type: Proprietary"
 
-      - model: GPT-5 (2025-08-07)
+      - model: GPT-5 (20250807)
         org: OpenAI
         resolved: 68.4
         avg_cost: 0.27
@@ -80,7 +81,7 @@ leaderboards:
           - "Org: OpenAI"
           - "Type: Proprietary"
 
-      - model: GPT-5-mini (2025-08-07)
+      - model: GPT-5-mini (20250807)
         org: OpenAI
         resolved: 63.0
         avg_cost: 0.05

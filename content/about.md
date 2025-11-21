@@ -1,26 +1,7 @@
 # About
 
 <!-- Paper URL: https://arxiv.org/abs/2511.13646 -->
-
-## Code
-
-**GitHub:** [https://github.com/OpenAutoCoder/live-swe-agent](https://github.com/OpenAutoCoder/live-swe-agent)
-
----
-
-## Quick Start
-
-```bash
-# Installation commands to be added
-```
-
----
-
-## Documentation
-
-Full documentation: [To be added]
-
----
+<!-- Code URL: https://github.com/OpenAutoCoder/live-swe-agent -->
 
 ## Citation
 
