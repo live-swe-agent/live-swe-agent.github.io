@@ -288,13 +288,13 @@
 
 /* Footnotes */
 .leaderboard-footnotes {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
 }
 
 .footnote-text {
-    font-size: 0.7em;
-    color: #aaa;
+    font-size: 0.85em;
+    color: #676666;
     margin: 0.25rem 0;
     line-height: 1.4;
 }
