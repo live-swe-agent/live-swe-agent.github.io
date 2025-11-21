@@ -8,7 +8,7 @@ website_subtitle: Can Software Engineering Agents to Self-Evolve on the Fly?
 section_title: Leaderboard
 
 # Section Description (displayed below the section title, supports HTML)
-section_description: 'All results are evaluated using our <a href="https://github.com/OpenAutoCoder/live-swe-agent" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Live-SWE-agent</a> scaffold. <br> The <span class="badge badge-verified" style="padding: 0.0625rem 0.25rem; font-size: 0.7rem;">✓</span> badge indicates that results have been verified.' 
+section_description: 'All results are evaluated using our <a href="https://github.com/OpenAutoCoder/live-swe-agent" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-weight: bold; padding: 0.125rem 0.375rem; border-radius: 0.25rem; text-decoration: none;">Live-SWE-agent</a> scaffold. The <span class="badge badge-verified" style="padding: 0.0625rem 0.25rem; font-size: 0.7rem;">✓</span> badge indicates that results have been verified. <br> Submit your model''s score with our scaffold for an apple:apple comparison!' 
 
 # Footer Links Configuration
 footer_links:
@@ -41,9 +41,9 @@ leaderboards:
       - title: '📣 News'
         content: |
           <ul>
-            <li><span style="color: black; font-weight: bold;">[Nov 20th, 2025]:</span> Gemini 3 Pro + Live-SWE-agent scores 77.4% on SWE-bench Verified, outperforming all available models (including Claude 4.5)!!</li>
-            <li><span style="color: black; font-weight: bold;">[Nov 17th, 2025]:</span> Live-SWE-agent achieves the new state-of-the-art solve rate of 45.8% on SWE-Bench Pro!</li>
-            <li><span style="color: black; font-weight: bold;">[Nov 17th, 2025]:</span> We've released Live-SWE-agent 1.0.0!</li>
+            <li><span style="font-weight: bold;">[Nov 20th, 2025]:</span> Gemini 3 Pro + Live-SWE-agent scores 77.4% on SWE-bench Verified, outperforming all available models (including Claude 4.5)!!</li>
+            <li><span style="font-weight: bold;">[Nov 17th, 2025]:</span> Live-SWE-agent achieves the new state-of-the-art solve rate of 45.8% on SWE-Bench Pro!</li>
+            <li><span style="font-weight: bold;">[Nov 17th, 2025]:</span> We've released Live-SWE-agent 1.0.0!</li>
           </ul>
       - title: '<a href="https://arxiv.org/abs/2511.13646" target="_blank" rel="noopener noreferrer">Live-SWE-agent</a>'
         content: |
