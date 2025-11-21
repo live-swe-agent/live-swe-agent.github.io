@@ -5,10 +5,6 @@
 
 ## Citation
 
-### Acknowledgement
-
-The layout and design of this website are inspired by the [SWE-bench](https://swebench.com) leaderboard design.
-
 ### BibTeX
 
 If you use Live-SWE-agent in your research, please cite our paper:
@@ -23,4 +19,8 @@ If you use Live-SWE-agent in your research, please cite our paper:
       url={https://arxiv.org/abs/2511.13646}, 
 }
 ```
+
+### Acknowledgement
+
+The layout and design of this website are inspired by the [SWE-bench](https://swebench.com) leaderboard design.
 
