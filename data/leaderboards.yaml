@@ -38,6 +38,13 @@ footer_links:
 leaderboards:
   - display_name: SWE-bench Verified
     info_sections:
+      - title: '📣 News'
+        content: |
+          <ul>
+            <li><span style="color: black; font-weight: bold;">[Nov 20th, 2025]:</span> Gemini 3 Pro + Live-SWE-agent scores 77.4% on SWE-bench Verified, outperforming all available models (including Claude 4.5)!!</li>
+            <li><span style="color: black; font-weight: bold;">[Nov 17th, 2025]:</span> Live-SWE-agent achieves the new state-of-the-art solve rate of 45.8% on SWE-Bench Pro!</li>
+            <li><span style="color: black; font-weight: bold;">[Nov 17th, 2025]:</span> We've released Live-SWE-agent 1.0.0!</li>
+          </ul>
       - title: '<a href="https://arxiv.org/abs/2511.13646" target="_blank" rel="noopener noreferrer">Live-SWE-agent</a>'
         content: |
           Live-SWE-agent is the first live software agent that can autonomously and continuously evolve itself on-the-fly during runtime when solving real-world software problems.

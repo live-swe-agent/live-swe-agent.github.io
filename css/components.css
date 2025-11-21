@@ -165,18 +165,37 @@
     width: 200px;
 }
 
+th.resolved-col,
+td.resolved-col {
+    text-align: center;
+}
+
 .cost-col {
     width: 120px;
-    text-align: right;
+}
+
+th.cost-col,
+td.cost-col {
+    text-align: center;
 }
 
 .org-col {
     width: 150px;
 }
 
+th.org-col,
+td.org-col {
+    text-align: center;
+}
+
 .date-col {
     width: 120px;
     color: var(--color-text-secondary);
+}
+
+th.date-col,
+td.date-col {
+    text-align: center;
 }
 
 /* Model Name */
