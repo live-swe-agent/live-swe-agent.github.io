@@ -44,7 +44,7 @@ leaderboards:
           <br>
           Figure below presents an overview of Live-SWE-agent.
           <br>
-          <img src="img/overview.pdf" alt="Live-SWE-agent Overview" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+          <img src="img/overview.png" alt="Live-SWE-agent Overview" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
           <br>
           First, <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; border-radius: 50%; background-color: #a64d79; color: white; font-size: 0.8em;">1</span> the agent take in both the project codebase and the description of the issue to be solved with only a limited set of tools (e.g., bash commands), aiming to generate and use its own tools on the fly while solving the issue.
           <br>
@@ -56,8 +56,21 @@ leaderboards:
       - title: '<a href="https://openai.com/index/introducing-swe-bench-verified/" target="_blank" rel="noopener noreferrer">SWE-bench Verified</a>'
         content: SWE-bench Verified benchmark contains 500 software development problems where the goal is to successfully modify the repository given a problem description. SWE-bench Verified is validated by human developers to ensure each problem description has sufficient amount of information to solve the issue.
 
+    footnotes:
+      - "¹ We use temperature=1.0 for Gemini 3 Pro Preview."
+
     results:
       # Proprietary Models
+      - model: Gemini 3 Pro Preview (20251118)¹
+        org: Google
+        resolved: 77.4
+        avg_cost: 0.482
+        date: "2025-11-20"
+        open_source: false
+        verified: true
+        tags:
+          - "Org: Google"
+          - "Type: Proprietary"
 
       - model: Claude 4.5 Sonnet (20250929)
         org: Anthropic

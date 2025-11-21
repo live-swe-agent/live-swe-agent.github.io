@@ -285,3 +285,16 @@
         width: 80px;
     }
 }
+
+/* Footnotes */
+.leaderboard-footnotes {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+}
+
+.footnote-text {
+    font-size: 0.7em;
+    color: #aaa;
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}

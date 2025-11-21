@@ -108,6 +108,15 @@
                 <p>No models match the selected filters.</p>
             </div>
 
+            <!-- Footnotes -->
+            {% if leaderboard.footnotes %}
+            <div class="leaderboard-footnotes">
+                {% for footnote in leaderboard.footnotes %}
+                <p class="footnote-text">{{ footnote }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
             <!-- Benchmark Info Sections -->
             {% if leaderboard.info_sections %}
                 {% for info in leaderboard.info_sections %}
