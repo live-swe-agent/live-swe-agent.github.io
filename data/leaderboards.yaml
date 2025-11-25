@@ -41,7 +41,7 @@ leaderboards:
       - title: '📣 News'
         content: |
           <ul>
-            <li><span style="font-weight: bold;">[Nov 20th, 2025]:</span> Gemini 3 Pro + Live-SWE-agent scores 77.4% on SWE-bench Verified, outperforming all available models (including Claude Sonnet 4.5) at the time of writing！！</li>
+            <li><span style="font-weight: bold;">[Nov 20th, 2025]:</span> Gemini 3 Pro + Live-SWE-agent scores 77.4% on SWE-bench Verified, outperforming all available models (including Claude Sonnet 4.5) at the time of writing!!</li>
             <li><span style="font-weight: bold;">[Nov 17th, 2025]:</span> Live-SWE-agent achieves the new state-of-the-art solve rate of 45.8% on SWE-Bench Pro!</li>
             <li><span style="font-weight: bold;">[Nov 17th, 2025]:</span> We've released Live-SWE-agent 1.0.0!</li>
           </ul>
@@ -66,7 +66,7 @@ leaderboards:
     results:
       # Proprietary Models
       - model: Claude Opus 4.5 (20251101)
-        org: Google
+        org: Anthropic
         # footnote: "We use temperature=1.0 for this model."
         resolved: 79.2
         avg_cost: 0.86
