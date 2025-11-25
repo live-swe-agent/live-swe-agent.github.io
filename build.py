@@ -93,32 +93,6 @@ def load_markdown_content(content_dir: Path) -> dict:
     return content
 
 
-def extract_tags(leaderboards_data: dict) -> tuple[dict, list]:
-    """
-    Extract tags from leaderboard data
-    Returns: (leaderboard_tags, all_tags)
-    - leaderboard_tags: {leaderboard_name: [tag1, tag2, ...]}
-    - all_tags: [unique tags across all leaderboards]
-    """
-    leaderboard_tags = {}
-    all_tags_set = set()
-
-    for leaderboard in leaderboards_data['leaderboards']:
-        name = leaderboard['name']
-        tags = set()
-
-        for result in leaderboard['results']:
-            if 'tags' in result:
-                for tag in result['tags']:
-                    tags.add(tag)
-                    all_tags_set.add(tag)
-
-        leaderboard_tags[name] = sorted(list(tags))
-
-    all_tags = sorted(list(all_tags_set))
-    return leaderboard_tags, all_tags
-
-
 def copy_static_files(src_dir: Path, dest_dir: Path):
     """Copy static files (CSS, JS, images) to dist directory"""
     static_dirs = ['css', 'js', 'img']
@@ -148,11 +122,9 @@ def build_site():
     # Load data
     print("\nLoading data...")
     leaderboards_data = load_yaml_data(data_dir / 'leaderboards.yaml')
-    leaderboard_tags, all_tags = extract_tags(leaderboards_data)
     markdown_content = load_markdown_content(content_dir)
 
     print(f"✓ Loaded {len(leaderboards_data['leaderboards'])} leaderboards")
-    print(f"✓ Extracted {len(all_tags)} unique tags")
     print(f"✓ Loaded {len(markdown_content)} markdown content files")
 
     # Setup Jinja2 environment
@@ -185,8 +157,6 @@ def build_site():
 
     html = template.render(
         leaderboards=leaderboards_data['leaderboards'],
-        leaderboard_tags=leaderboard_tags,
-        all_tags=all_tags,
         content=markdown_content,
         footer_links=footer_links,
         website_title=website_title,

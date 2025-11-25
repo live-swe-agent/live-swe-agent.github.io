@@ -5,15 +5,11 @@
 // Filter state for each leaderboard (will be populated dynamically)
 const filterState = {};
 
-// Store dropdown instances
-const tagDropdowns = {};
-
 /**
  * Initialize filters
  */
 document.addEventListener('DOMContentLoaded', () => {
     initTypeFilters();
-    initTagFilters();
 });
 
 /**
@@ -37,8 +33,7 @@ function initTypeFilters() {
         // Initialize filter state for this leaderboard
         if (!filterState[leaderboard]) {
             filterState[leaderboard] = {
-                type: 'all',
-                tags: new Set(['all'])
+                type: 'all'
             };
         }
 
@@ -63,44 +58,6 @@ function initTypeFilters() {
 }
 
 /**
- * Initialize tag filters with MultiSelectDropdown
- */
-function initTagFilters() {
-    // Get leaderboard tags from embedded JSON
-    const tagsDataElement = document.getElementById('leaderboard-tags-data');
-    if (!tagsDataElement) {
-        console.error('Leaderboard tags data not found');
-        return;
-    }
-
-    const leaderboardTags = JSON.parse(tagsDataElement.textContent);
-
-    // Initialize dropdown for each leaderboard
-    Object.keys(leaderboardTags).forEach(leaderboard => {
-        // Initialize filter state for this leaderboard if not exists
-        if (!filterState[leaderboard]) {
-            filterState[leaderboard] = {
-                type: 'all',
-                tags: new Set(['all'])
-            };
-        }
-
-        const tags = leaderboardTags[leaderboard];
-
-        tagDropdowns[leaderboard] = new MultiSelectDropdown(`${leaderboard}-tag-filter`, {
-            items: tags,
-            selected: ['all'],
-            displayName: 'Tags',
-            searchEnabled: true,
-            onSelectionChange: (selectedTags) => {
-                filterState[leaderboard].tags = selectedTags;
-                applyFilters(leaderboard);
-            }
-        });
-    });
-}
-
-/**
  * Apply filters to a leaderboard
  */
 function applyFilters(leaderboard) {
@@ -118,18 +75,6 @@ function applyFilters(leaderboard) {
         if (state.type !== 'all') {
             const rowType = row.getAttribute('data-type');
             if (rowType !== state.type) {
-                shouldShow = false;
-            }
-        }
-
-        // Check tag filter
-        if (shouldShow && !state.tags.has('all')) {
-            const rowTagsStr = row.getAttribute('data-tags');
-            const rowTags = rowTagsStr ? rowTagsStr.split(',') : [];
-
-            // Row must have at least one selected tag
-            const hasMatchingTag = rowTags.some(tag => state.tags.has(tag));
-            if (!hasMatchingTag) {
                 shouldShow = false;
             }
         }
@@ -173,15 +118,9 @@ function resetFilters(leaderboard) {
         btn.classList.toggle('active', btn.getAttribute('data-filter') === 'all');
     });
 
-    // Reset tag filter
-    if (tagDropdowns[leaderboard]) {
-        tagDropdowns[leaderboard].setSelectedItems(['all']);
-    }
-
     // Reset state
     filterState[leaderboard] = {
-        type: 'all',
-        tags: new Set(['all'])
+        type: 'all'
     };
 
     // Apply filters

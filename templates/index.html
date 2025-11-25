@@ -47,11 +47,6 @@
                         <button class="filter-btn" data-filter="open-source">Open Source</button>
                     </div>
                 </div>
-
-                <div class="filter-group">
-                    <label class="filter-label">Tags:</label>
-                    <div id="{{ leaderboard.name }}-tag-filter"></div>
-                </div>
             </div>
 
             <!-- Leaderboard Table -->
@@ -63,15 +58,15 @@
                             <th class="model-col sortable" data-sort="model">Model</th>
                             <th class="resolved-col sortable active desc" data-sort="resolved">% Resolved</th>
                             <th class="cost-col sortable" data-sort="cost">Avg. Cost ($)</th>
-                            <th class="org-col sortable" data-sort="org">Organization</th>
+                            <th class="org-col sortable" data-sort="org">Org</th>
                             <th class="date-col sortable" data-sort="date">Date</th>
+                            <th class="trajs-col">Trajs</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for result in leaderboard.results %}
                         <tr class="leaderboard-row"
                             data-type="{% if result.open_source %}open-source{% else %}proprietary{% endif %}"
-                            data-tags="{{ result.tags | join(',') }}"
                             data-model="{{ result.model }}"
                             data-resolved="{{ result.resolved }}"
                             data-cost="{{ result.avg_cost }}"
@@ -102,6 +97,17 @@
                             <td class="cost-col">${{ "%.2f"|format(result.avg_cost) }}</td>
                             <td class="org-col">{{ result.org }}</td>
                             <td class="date-col">{{ result.date }}</td>
+                            <td class="trajs-col">
+                                {% if result.trajs_link %}
+                                <a href="{{ result.trajs_link }}" target="_blank" rel="noopener noreferrer" class="trajs-link" title="View Trajectories">
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                {% endif %}
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -150,10 +156,6 @@
 <!-- Embed leaderboard data as JSON for JavaScript -->
 <script type="application/json" id="leaderboard-data">
 {{ leaderboards | tojson }}
-</script>
-
-<script type="application/json" id="leaderboard-tags-data">
-{{ leaderboard_tags | tojson }}
 </script>
 
 {% endblock %}

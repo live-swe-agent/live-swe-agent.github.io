@@ -75,9 +75,7 @@ leaderboards:
         open_source: false
         verified: true
         newest: true
-        tags:
-          - "Org: Anthropic"
-          - "Type: Proprietary"
+        trajs_link: ""
 
       - model: Gemini 3 Pro Preview (20251118)
         org: Google
@@ -88,9 +86,7 @@ leaderboards:
         open_source: false
         verified: true
         newest: true
-        tags:
-          - "Org: Google"
-          - "Type: Proprietary"
+        trajs_link: "https://huggingface.co/datasets/livesweagent/gemini_3_pro_swebench_verified_traj"
 
       - model: Claude Sonnet 4.5 (20250929)
         org: Anthropic
@@ -99,9 +95,7 @@ leaderboards:
         date: "2025-11-17"
         open_source: false
         verified: true
-        tags:
-          - "Org: Anthropic"
-          - "Type: Proprietary"
+        trajs_link: "https://huggingface.co/datasets/livesweagent/claude-sonnet-4-5_swebench_verified_traj"
 
       - model: GPT-5 (20250807)
         org: OpenAI
@@ -110,9 +104,7 @@ leaderboards:
         date: "2025-11-17"
         open_source: false
         verified: true
-        tags:
-          - "Org: OpenAI"
-          - "Type: Proprietary"
+        trajs_link: "https://huggingface.co/datasets/livesweagent/gpt-5_swebench_verified_traj"
 
       - model: GPT-5-mini (20250807)
         org: OpenAI
@@ -121,9 +113,7 @@ leaderboards:
         date: "2025-11-17"
         open_source: false
         verified: true
-        tags:
-          - "Org: OpenAI"
-          - "Type: Proprietary"
+        trajs_link: "https://huggingface.co/datasets/livesweagent/gpt-5-mini_swebench_verified_traj"
 
 
   - display_name: SWE-Bench Pro
@@ -139,6 +129,4 @@ leaderboards:
         date: "2025-11-15"
         open_source: false
         verified: true
-        tags:
-          - "Org: Anthropic"
-          - "Type: Proprietary"
+        trajs_link: "https://huggingface.co/datasets/livesweagent/claude-sonnet-4-5_swebench_pro_traj"

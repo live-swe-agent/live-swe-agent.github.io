@@ -198,6 +198,32 @@ td.date-col {
     text-align: center;
 }
 
+.trajs-col {
+    width: 60px;
+}
+
+th.trajs-col,
+td.trajs-col {
+    text-align: center;
+}
+
+.trajs-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+.trajs-link:hover {
+    color: var(--color-primary-hover);
+}
+
+.trajs-link .external-icon {
+    width: 14px;
+    height: 14px;
+}
+
 /* Model Name */
 .model-name {
     display: flex;
@@ -278,7 +304,8 @@ td.date-col {
 
 /* Responsive Table */
 @media (max-width: 1024px) {
-    .org-col {
+    .org-col,
+    .trajs-col {
         display: none;
     }
 }
