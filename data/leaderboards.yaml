@@ -14,8 +14,8 @@ section_description: 'All results are evaluated using our <a href="https://githu
 footer_links:
   - name: GitHub
     url: https://github.com/OpenAutoCoder/live-swe-agent
-  # - name: HuggingFace
-  #   url: https://huggingface.co/ise-uiuc
+  - name: HuggingFace
+    url: https://huggingface.co/livesweagent
   - name: Paper
     url: https://arxiv.org/abs/2511.13646
 
@@ -75,7 +75,7 @@ leaderboards:
         open_source: false
         verified: true
         newest: true
-        trajs_link: ""
+        trajs_link: "https://huggingface.co/datasets/livesweagent/claude-opus-4-5_swebench_verified_traj"
 
       - model: Gemini 3 Pro Preview (20251118)
         org: Google
@@ -114,6 +114,15 @@ leaderboards:
         open_source: false
         verified: true
         trajs_link: "https://huggingface.co/datasets/livesweagent/gpt-5-mini_swebench_verified_traj"
+
+      - model: Kimi K2 Thinking
+        org: Moonshot
+        resolved: 59.8
+        avg_cost: 0.40
+        date: "2025-11-26"
+        open_source: true
+        verified: true
+        trajs_link: "https://huggingface.co/datasets/livesweagent/kimi-k2-thinking_swebench_verified_traj"
 
 
   - display_name: SWE-Bench Pro
